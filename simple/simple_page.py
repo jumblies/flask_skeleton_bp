@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
-from app.helper import test
+from simple.helper import test
 
 simple_page = Blueprint('simple_page', __name__, static_folder='static',
                         template_folder='templates')
