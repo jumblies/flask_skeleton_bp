@@ -1,0 +1,19 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Flask BP Skeleton</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<html >
+    <h1 style="color: white; text-align: center;">Blueprint Tester</h1>
+    
+<nav>
+  <h1>Flask BP Skeleton</h1>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h2>Blueprint Skeleton simple page</h2>
+
+<h2>It's actually fucking working!</h2>
+<h1 style="text-align: center;">{{ result }}</h1>
+
+<!--this is a hardlink to an endpoint-->
+<a href="/second">Second endpoint hardlink :(</a>
+<br>
+<!--This is an example of how to link to an internal blueprint-->
+<a href="{{url_for('second_page.show')}}">Second url_for dynamic link</a>
+
+
+
+{% endblock %}
